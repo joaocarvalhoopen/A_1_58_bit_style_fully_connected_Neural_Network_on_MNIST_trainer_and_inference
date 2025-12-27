@@ -11,6 +11,9 @@ log2( 3 ) = 1.58 bits
 
 And evaluated with this encoding. This quantization aware training is suposed to produce better results then a posterior quantization from BP16 or F32 into a lower number of bits. Because it is trainned on those bits. Also, the weights that in a normal network were multiplied by the inputs of each layer in this case ( because we only have the value -1, 0, 1 ) they are integer summed up. And this is a less costly operation, then a multiplication. And if we encode the each weight 1.58 bits into a ternary (trits instead of bits) representation and then generate the decimal and from the decimal the binary encoding, we can fit into each 8 bit u8, 5x 1.58 bits, that means that this representation has the possibility to be 5x smaller then the i8 byte representation and 20x more compressed and less bandwith intensive then f32 representation. In this project the training is multi threaded, but the procesing of the 1.58 bits is not SIMD (at least for now). This was a small project for me to learn more about this recent techniques. This program is made in the Odin programming language.
 
+## Note
+You have to decompress the zip file into its diretory.
+
 ## Output
 
 ### Train on CPU
