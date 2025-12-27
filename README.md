@@ -26,33 +26,33 @@ time ./bitnet_mnist.exe
 --test-labels  mnist_idx/t10k-labels-idx1-ubyte
 --epochs 15 --batch 512 --hidden 256
 --lr_start 0.005 --lr_stop 0.0002 --threads 24 
---limit-train 60000 --limit-test 10000
+--limit-train 50000 --limit-test 10000
 
 
-Loaded MNIST: train=60000 ( of 60000 ), test=10000 ( of 10000 )
+Loaded MNIST: train=50000 ( of 60000 ), test=10000 ( of 10000 )
 
 Training with 24 threads
 
-Epoch 1 / 15  loss=0.26745  test_acc=0.9584  learning_rate=0.007820
-Epoch 2 / 15  loss=0.11053  test_acc=0.9683  learning_rate=0.006115
-Epoch 3 / 15  loss=0.08074  test_acc=0.9694  learning_rate=0.004782
-Epoch 4 / 15  loss=0.05964  test_acc=0.9751  learning_rate=0.003739
-Epoch 5 / 15  loss=0.04007  test_acc=0.9768  learning_rate=0.002924
-Epoch 6 / 15  loss=0.03114  test_acc=0.9779  learning_rate=0.002287
-Epoch 7 / 15  loss=0.02285  test_acc=0.9805  learning_rate=0.001788
-Epoch 8 / 15  loss=0.01720  test_acc=0.9788  learning_rate=0.001398
-Epoch 9 / 15  loss=0.01704  test_acc=0.9809  learning_rate=0.001093
-Epoch 10 / 15  loss=0.01089  test_acc=0.9815  learning_rate=0.000855
-Epoch 11 / 15  loss=0.00917  test_acc=0.9808  learning_rate=0.000669
-Epoch 12 / 15  loss=0.00699  test_acc=0.9812  learning_rate=0.000523
-Epoch 13 / 15  loss=0.00605  test_acc=0.9809  learning_rate=0.000409
-Epoch 14 / 15  loss=0.00559  test_acc=0.9824  learning_rate=0.000320
-Epoch 15 / 15  loss=0.00479  test_acc=0.9823  learning_rate=0.000250
+Epoch 1 / 15  loss=0.31832  test_acc=0.9536  learning_rate=0.007820
+Epoch 2 / 15  loss=0.11515  test_acc=0.9679  learning_rate=0.006115
+Epoch 3 / 15  loss=0.07958  test_acc=0.9682  learning_rate=0.004782
+Epoch 4 / 15  loss=0.05762  test_acc=0.9760  learning_rate=0.003739
+Epoch 5 / 15  loss=0.03995  test_acc=0.9758  learning_rate=0.002924
+Epoch 6 / 15  loss=0.02726  test_acc=0.9782  learning_rate=0.002287
+Epoch 7 / 15  loss=0.02096  test_acc=0.9777  learning_rate=0.001788
+Epoch 8 / 15  loss=0.01488  test_acc=0.9796  learning_rate=0.001398
+Epoch 9 / 15  loss=0.01146  test_acc=0.9816  learning_rate=0.001093
+Epoch 10 / 15  loss=0.00868  test_acc=0.9811  learning_rate=0.000855
+Epoch 11 / 15  loss=0.00645  test_acc=0.9834  learning_rate=0.000669
+Epoch 12 / 15  loss=0.00529  test_acc=0.9824  learning_rate=0.000523
+Epoch 13 / 15  loss=0.00468  test_acc=0.9820  learning_rate=0.000409
+Epoch 14 / 15  loss=0.00388  test_acc=0.9826  learning_rate=0.000320
+Epoch 15 / 15  loss=0.00350  test_acc=0.9827  learning_rate=0.000250
 Saved weights to weights.bla
 
-real    0m16.994s
-user    3m8.755s
-sys     0m2.569s
+real    0m14.005s
+user    2m37.214s
+sys     0m2.195s
 ```
 
 ### Inference on CPU
@@ -60,7 +60,7 @@ sys     0m2.569s
 ``` 
 ./bitnet_mnist.exe --weights weights.bla --infer-index 300
 
-Loaded MNIST: train=60000 ( of 60000 ), test=10000 ( of 10000 )
+Loaded MNIST: train=50000 ( of 60000 ), test=10000 ( of 10000 )
 
 Loaded weights from weights.bla ( hidden=256, step=1770 )
 
